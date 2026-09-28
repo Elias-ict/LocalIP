@@ -1,6 +1,6 @@
 # LocalIP
 
-**Version 1.0.12 — Developed by Elias.**
+**Version 1.0.15 — Developed by Elias.**
 
 A small Windows desktop utility for network administrators and support teams. It shows the computer name and the current local IPv4 address in a small floating window, and repairs the most common client-network issues with a single click.
 
@@ -19,7 +19,7 @@ Run `LocalIPSetup.exe` **as an administrator**. The single-file installer asks f
 
 ## Server mode
 
-Normal installation for the administrator's own computer: installs the application, publishes `LocalIP.exe` + `LocalIP.version` to the Share Folder with read-only client access, and creates a desktop shortcut. No forced startup execution is enabled on that computer. In a Domain, clients are served centrally from the share through a Group Policy Computer Startup Script (available from the developer); in a Workgroup, run the same Setup on each client with local Administrator credentials.
+Normal installation for the administrator's own computer: installs the application, publishes `LocalIP.exe` + `LocalIP.version` to the Share Folder with read-only client access, and creates a desktop shortcut. No forced startup execution is enabled on that computer. An optional installer checkbox can also create the centralized Group Policy deployment directly (Domain Administrator only). In a Domain, clients are served centrally from the share through a Group Policy Computer Startup Script (available from the developer); in a Workgroup, run the same Setup on each client with local Administrator credentials.
 
 ## Client mode
 
