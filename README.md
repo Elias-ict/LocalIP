@@ -32,3 +32,7 @@ Managed-client installation: registers the `LocalIP` SYSTEM startup task (runs h
 - No data ever leaves the machine: IP discovery uses the local routing table (no packet is sent) and all logs stay on the local disk.
 - The installer grants clients read-only access to the distribution share and never changes firewall rules or profiles.
 - Uninstall removes the application files, both scheduled tasks, the launcher value, the shortcut, and the stored settings; the central share is left intact for remaining clients.
+
+## Code signing
+
+Release binaries are code-signed through the SignPath Foundation (certificate pending approval).
