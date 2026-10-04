@@ -35,4 +35,4 @@ Managed-client installation: registers the `LocalIP` SYSTEM startup task (runs h
 
 ## Code signing
 
-Release binaries are code-signed through the SignPath Foundation (certificate pending approval).
+Release binaries are planned to be code-signed through the SignPath Foundation.
