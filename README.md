@@ -1,13 +1,13 @@
 # LocalIP
 
-**Version 1.0.17 — Developed by Elias.**
+**Version 1.0.18 — Developed by Elias-ICT.**
 
 A small Windows desktop utility for network administrators and support teams. It shows the computer name and the current local IPv4 address in a small floating window, and repairs the most common client-network issues with a press-and-hold.
 
 ## Features
 
 - Always-visible floating window with computer name and current local IPv4 address (one line per address).
-- Press and hold the left mouse button (~1 second) to run network maintenance and refresh the IP: clears the LAN proxy setting, flushes DNS (`ipconfig /flushdns`), renews the DHCP lease (`ipconfig /release` + `ipconfig /renew`). A plain click does nothing, so stray clicks can never reset the network.
+- Press and hold the left mouse button (~1 second) to run network maintenance and refresh the IP: clears the LAN proxy setting, flushes the DNS resolver cache, renews the DHCP lease (`ipconfig /release` + `ipconfig /renew`). A plain click does nothing, so stray clicks can never reset the network.
 - Right-click copies the current IP to the clipboard; the window can be dragged anywhere and remembers its position.
 - Automatic IP refresh at startup and a deployment self-check via `LocalIP.exe --deployment-check`.
 - Self-healing client window: a headless watchdog task re-checks every 2 minutes and silently relaunches the window if it was closed (for example from Task Manager); only one instance ever runs.
