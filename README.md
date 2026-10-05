@@ -1,14 +1,14 @@
 # LocalIP
 
-**Version 1.0.16 — Developed by Elias.**
+**Version 1.0.17 — Developed by Elias.**
 
-A small Windows desktop utility for network administrators and support teams. It shows the computer name and the current local IPv4 address in a small floating window, and repairs the most common client-network issues with a single click.
+A small Windows desktop utility for network administrators and support teams. It shows the computer name and the current local IPv4 address in a small floating window, and repairs the most common client-network issues with a press-and-hold.
 
 ## Features
 
-- Always-visible floating window with computer name, current local IP, and a green `Connected` / red `Offline` status indicator.
-- One left-click runs network maintenance and refreshes the IP: clears the LAN proxy setting, flushes DNS (`ipconfig /flushdns`), renews the DHCP lease (`ipconfig /release` + `ipconfig /renew`).
-- Right-click copies the displayed IP to the clipboard; the `PIN` button toggles always-on-top; the window can be dragged anywhere.
+- Always-visible floating window with computer name and current local IPv4 address (one line per address).
+- Press and hold the left mouse button (~1 second) to run network maintenance and refresh the IP: clears the LAN proxy setting, flushes DNS (`ipconfig /flushdns`), renews the DHCP lease (`ipconfig /release` + `ipconfig /renew`). A plain click does nothing, so stray clicks can never reset the network.
+- Right-click copies the current IP to the clipboard; the window can be dragged anywhere and remembers its position.
 - Automatic IP refresh at startup and a deployment self-check via `LocalIP.exe --deployment-check`.
 - Self-healing client window: a headless watchdog task re-checks every 2 minutes and silently relaunches the window if it was closed (for example from Task Manager); only one instance ever runs.
 - Maintenance log at `C:\ProgramData\LocalIP\maintenance.log`.
@@ -31,8 +31,4 @@ Managed-client installation: registers the `LocalIP` SYSTEM startup task (runs h
 - The SYSTEM task performs local repairs only (proxy/DNS/DHCP) and never displays a UI before logon; the interactive window appears only after a user logs on.
 - No data ever leaves the machine: IP discovery uses the local routing table (no packet is sent) and all logs stay on the local disk.
 - The installer grants clients read-only access to the distribution share and never changes firewall rules or profiles.
-- Uninstall removes the application files, both scheduled tasks, the launcher value, the shortcut, and the stored settings; the central share is left intact for remaining clients.
-
-## Code signing
-
-Release binaries are planned to be code-signed through the SignPath Foundation.
+- Uninstall removes the application files, both scheduled tasks, the launcher value, the shortcut, and the stored settings (including the settings key itself when empty); the central share is left intact for remaining clients.
