@@ -1,6 +1,8 @@
 # LocalIP
 
-**Version 1.0.19 — Developed by Elias-ICT.**
+**Version 1.0.21 — Developed by Elias-ICT.**
+
+Changes since version 1.0.19: bug fixes only.
 
 A small Windows desktop utility for network administrators and support teams. It shows the computer name and the current local IPv4 address in a small floating window, and repairs the most common client-network issues with a press-and-hold.
 
